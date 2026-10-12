@@ -1,0 +1,145 @@
+/* 색상은 여기 :root 변수로만 정의 */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #8a8a8a;
+  --line: #e5e5e5;
+  --accent: #1f5fbf; /* 강조색 1개 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* 본문 폭: 모바일은 꽉 차게, PC는 최대 720px 가운데 */
+.wrap {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 공통 메뉴 */
+.site-nav {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+main {
+  padding: 24px 0 64px;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 24px 0 8px;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+/* 칼럼 목록 */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  border-bottom: 1px solid var(--line);
+}
+
+.list a {
+  display: block;
+  padding: 14px 0;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* preview.html 섹션 */
+section {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.label {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* Q&A 아코디언 */
+details {
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+details p {
+  margin: 8px 0 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
